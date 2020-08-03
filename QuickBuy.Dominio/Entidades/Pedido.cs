@@ -1,10 +1,11 @@
 ﻿using QuickBuy.Dominio.ObjetoDeValor;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace QuickBuy.Dominio.Entidades
 {
-    public class Pedido
+    public class Pedido : Entidade
     {
         public int Id { get; set; }
         public DateTime DataPedido { get; set; }
@@ -25,5 +26,16 @@ namespace QuickBuy.Dominio.Entidades
         /// </summary>
 
         public ICollection<ItemPedido> ItensPedidos { get; set; }
+
+        public override void Validate()
+        {
+            LimparMensagens();
+
+            if (!ItensPedidos.Any())
+                AdicionarMensagem("ERROR: Pedido need itens!");
+
+            if (string.IsNullOrEmpty(CEP))
+                AdicionarMensagem("ERROR: CEP not exists!");
+        }
     }
 }
