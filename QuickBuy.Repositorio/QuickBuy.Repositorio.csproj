@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200813230124_FirstVersionBase.cs" />
+    <Compile Remove="Migrations\20200813230124_FirstVersionBase.Designer.cs" />
+    <Compile Remove="Migrations\20200814153542_FixFirstVersion.cs" />
+    <Compile Remove="Migrations\20200814153542_FixFirstVersion.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.0" />
   </ItemGroup>
