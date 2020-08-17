@@ -19,6 +19,10 @@ namespace QuickBuy.Repositorio.Contexto
         {
         }
 
+        public QuickBuyContexto()
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Classes de mapeamento aqui...

@@ -1,17 +1,13 @@
 ﻿using QuickBuy.Dominio.Contratos;
 using QuickBuy.Dominio.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using QuickBuy.Repositorio.Contexto;
 
 namespace QuickBuy.Repositorio.Repositorios
 {
     public class UserRepositorio : BaseRepositorio<User>, IUserRepositorio
     {
-        public UserRepositorio()
+        public UserRepositorio(QuickBuyContexto quickBuyContexto) : base(quickBuyContexto)
         {
-
         }
-
     }
 }
